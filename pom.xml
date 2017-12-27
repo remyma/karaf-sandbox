@@ -26,7 +26,13 @@
     <packaging>karaf-assembly</packaging>
 
     <name>karaf-sandbox-feature</name>
-    <description>karaf-sandbox details</description>
+    <description>Marem :: Karaf :: Sandbox</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <karaf.version>4.1.4</karaf.version>
+        <hawtio.version>1.5.6</hawtio.version>
+    </properties>
 
     <repositories>
         <!-- Apache ServiceMix repository (for region) -->
@@ -71,20 +77,20 @@
         <dependency>
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>framework</artifactId>
-            <version>4.1.4</version>
+            <version>${karaf.version}</version>
             <type>kar</type>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>standard</artifactId>
-            <version>4.1.4</version>
+            <version>${karaf.version}</version>
             <classifier>features</classifier>
             <type>xml</type>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>spring</artifactId>
-            <version>4.1.4</version>
+            <version>${karaf.version}</version>
             <classifier>features</classifier>
             <type>xml</type>
             <scope>runtime</scope>
@@ -92,10 +98,18 @@
         <dependency>
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>enterprise</artifactId>
-            <version>4.1.4</version>
+            <version>${karaf.version}</version>
             <classifier>features</classifier>
             <type>xml</type>
             <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.hawt</groupId>
+            <artifactId>hawtio-karaf</artifactId>
+            <version>${hawtio.version}</version>
+            <classifier>features</classifier>
+            <scope>runtime</scope>
+            <type>xml</type>
         </dependency>
     </dependencies>
 
@@ -121,7 +135,7 @@
                 <plugin>
                     <groupId>org.apache.karaf.tooling</groupId>
                     <artifactId>karaf-maven-plugin</artifactId>
-                    <version>4.1.4</version>
+                    <version>${karaf.version}</version>
                     <extensions>true</extensions>
                 </plugin>
             </plugins>
@@ -149,10 +163,8 @@
                     </installedFeatures>
                     <!-- <startupFeatures/> -->
                     <bootFeatures>
-                        <!-- standard distribution -->
                         <feature>standard</feature>
-                        <!-- minimal distribution -->
-                        <!--<feature>minimal</feature>-->
+                        <feature>hawtio-offline</feature>
                     </bootFeatures>
                     <javase>1.8</javase>
                 </configuration>
