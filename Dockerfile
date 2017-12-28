@@ -16,7 +16,7 @@ RUN mkdir /opt/karaf;
 COPY --from=BUILD /tmp/src/target/karaf-sandbox-1.0.0.tar.gz /opt/karaf-sandbox-1.0.0.tar.gz
 RUN tar --strip-components=1 -C /opt/karaf -xzf /opt/karaf-sandbox-1.0.0.tar.gz; \
     rm /opt/karaf-sandbox-1.0.0.tar.gz
-VOLUME ["/opt/karaf/deploy"]
+RUN mkdir -p /opt/karaf/data/log && touch /opt/karaf/data/log/karaf.log
 EXPOSE 1099 8101 44444 8181
 COPY entrypoint.sh /usr/local/bin/docker-entrypoint
 RUN chmod +x /usr/local/bin/docker-entrypoint
