@@ -7,6 +7,8 @@ import org.apache.camel.model.rest.RestOperationParamDefinition;
 import org.apache.camel.model.rest.RestOperationResponseMsgDefinition;
 import org.apache.camel.model.rest.RestParamType;
 
+import java.net.InetAddress;
+
 /**
  * Expose a rest api to handle messages.
  *
@@ -72,25 +74,43 @@ public class RestMessage extends RouteBuilder {
         internalServerErrorResponse.setCode("500");
         internalServerErrorResponse.setMessage("Internal server error");
 
+        String hostname = InetAddress.getLocalHost().getHostName();
+
         rest().path("/message")
                 .consumes("application/xml,application/json,text/plain")
                 .produces("application/xml,application/json")
+
+                .get()
+                    .description("GET messages")
+                    .responseMessage(acceptedResponse)
+                    .to("direct:getMessages")
+
+
                 .post("{type}")
                     .description("POST messages of given type")
                     .param(bodyParam)
                     .responseMessage(acceptedResponse)
                     .responseMessage(invalidInputResponse)
                     .responseMessage(internalServerErrorResponse)
-                .route().routeId("restMessageApi")
+                    .route().routeId("restMessageApi")
+                    .to("direct:postMessage");
 
+        from("direct:getMessages")
+            .setHeader(Exchange.HTTP_RESPONSE_CODE, constant("202"))
+            .setHeader("serverName", simple(hostname))
+            .setBody(constant("Should return messages from backend\n"));
+
+        from("direct:postMessage")
                 .setHeader("serverPort", simple("" + httpPort))
 
                 .choice()
                     .when(simple("${header.Content-Type} in 'application/json,application/xml,text/plain'"))
                         .convertBodyTo(String.class)
+
                 .log("received message :\n${body}\n")
 
                 .setHeader(Exchange.HTTP_RESPONSE_CODE, constant("202"))
+
                 .setBody(constant("OK"));
     }
 }
