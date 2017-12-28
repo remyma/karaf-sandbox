@@ -7,25 +7,33 @@
        http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd
        http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
 
-	<cm:property-placeholder persistent-id="marem.karaf.sandbox.rest" update-strategy="reload" />
+	<cm:property-placeholder id="rest-properties" persistent-id="marem.karaf.sandbox.rest">
+		<cm:default-properties>
+			<cm:property name="rest.message.http.port" value="8181"/>
+			<cm:property name="rest.message.server.api.context" value="/api"/>
+			<cm:property name="rest.message.server.api.doc.context" value="/doc"/>
+		</cm:default-properties>
+	</cm:property-placeholder>
 
-	<!-- setup camel servlet -->
 	<reference id="httpService" interface="org.osgi.service.http.HttpService"/>
-
-	<bean id="apiServlet" class="org.apache.camel.component.servlet.CamelHttpTransportServlet"/>
 
 	<bean class="org.apache.camel.component.servlet.osgi.OsgiServletRegisterer"
 		  init-method="register"
 		  destroy-method="unregister">
-		<property name="alias" value="${rest.message.server.api.context}"/>
+		<property name="alias" value="/api"/>
 		<property name="httpService" ref="httpService"/>
-		<property name="servlet" ref="apiServlet"/>
+		<property name="servlet" ref="fwkApiServlet"/>
+		<property name="servletName" value="api-servlet"/>
 	</bean>
+
+	<bean id="fwkApiServlet" class="org.apache.camel.component.servlet.CamelHttpTransportServlet"/>
 
 	<!-- setup camel context -->
 	<bean id="restMessageRoute" class="marem.karaf.sandbox.rest.route.RestMessage" />
 
 	<camelContext id="marem-rest-message" autoStartup="true" xmlns="http://camel.apache.org/schema/blueprint">
+		<propertyPlaceholder id="properties" location="blueprint:rest-properties"/>
+
         <routeBuilder ref="restMessageRoute" />
 	</camelContext>
 </blueprint>

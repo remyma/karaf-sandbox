@@ -60,6 +60,11 @@
                 </includes>
                 <filtering>false</filtering>
             </resource>
+            <resource>
+                <directory>${project.basedir}/src/main/feature</directory>
+                <filtering>true</filtering>
+                <targetPath>${project.build.directory}/feature</targetPath>
+            </resource>
         </resources>
 
         <plugins>
@@ -87,6 +92,7 @@
                             org.osgi.service.cm, <!-- In order to reference the interface org.osgi.service.cm.ConfigurationAdmin -->
                             *
                         </Import-Package>
+                        <_removeheaders>Import-Service</_removeheaders>
                     </instructions>
                 </configuration>
             </plugin>
@@ -107,6 +113,11 @@
                                     <file>src/main/resources/configuration/marem.karaf.sandbox.rest.properties</file>
                                     <type>cfg</type>
                                     <classifier>marem.karaf.sandbox.rest</classifier>
+                                </artifact>
+                                <artifact>
+                                    <file>target/feature/feature.xml</file>
+                                    <classifier>features</classifier>
+                                    <type>xml</type>
                                 </artifact>
                             </artifacts>
                         </configuration>

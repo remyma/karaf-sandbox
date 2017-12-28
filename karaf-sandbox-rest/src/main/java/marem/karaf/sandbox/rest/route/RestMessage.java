@@ -16,12 +16,6 @@ import org.apache.camel.model.rest.RestParamType;
 public class RestMessage extends RouteBuilder {
 
     /**
-     * Http host.
-     */
-    @PropertyInject("rest.message.http.host")
-    private String httpHost;
-
-    /**
      * Http port.
      */
     @PropertyInject("rest.message.http.port")
@@ -49,11 +43,12 @@ public class RestMessage extends RouteBuilder {
                 .log("Error");
 
         restConfiguration().component("servlet")
-                .host(httpHost).port(httpPort)
+                .port(8181)
+                .endpointProperty("servletName", "api-servlet")
                 .enableCORS(true)
                 .dataFormatProperty("prettyPrint", "true")
-                .contextPath(contextPath)
-                .apiContextPath(apiDocumentationContextPath + "/message")
+                .contextPath("/api")
+                .apiContextPath("/doc/message")
                 .apiContextRouteId("restMessageApiDocumentation")
                 .apiProperty("api.version", "1.0.0")
                 .apiProperty("api.title", "Marem Rest message")

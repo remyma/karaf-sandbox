@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="marem-karaf-sandbox-features-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
+    <repository>mvn:org.apache.camel.karaf/apache-camel/${camel.version}/xml/features</repository>
+
+    <feature name="karaf-sandbox-rest" version="${project.version}" install="auto">
+        <details>Rest message api.</details>
+
+        <feature>http</feature>
+
+        <feature version="${camel.version}">camel-blueprint</feature>
+        <feature version="${camel.version}">camel-core</feature>
+        <feature version="${camel.version}">camel-http</feature>
+        <feature version="${camel.version}">camel-jackson</feature>
+        <feature version="${camel.version}">camel-jaxb</feature>
+        <feature version="${camel.version}">camel-servlet</feature>
+        <feature version="${camel.version}">camel-swagger-java</feature>
+
+        <bundle>mvn:marem.karaf.sandbox/karaf-sandbox-rest/${project.version}</bundle>
+
+        <configfile finalname="${karaf.etc}/marem.karaf.sandbox.rest.cfg" override="false">
+            mvn:marem.karaf.sandbox/karaf-sandbox-rest/${project.version}/cfg/marem.karaf.sandbox.rest
+        </configfile>
+    </feature>
+</features>
+

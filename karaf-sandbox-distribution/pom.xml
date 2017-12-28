@@ -65,6 +65,7 @@
             <artifactId>standard</artifactId>
             <version>${karaf.version}</version>
             <classifier>features</classifier>
+            <scope>runtime</scope>
             <type>xml</type>
         </dependency>
         <dependency>
@@ -87,6 +88,14 @@
             <groupId>io.hawt</groupId>
             <artifactId>hawtio-karaf</artifactId>
             <version>${hawtio.version}</version>
+            <classifier>features</classifier>
+            <scope>runtime</scope>
+            <type>xml</type>
+        </dependency>
+        <dependency>
+            <groupId>marem.karaf.sandbox</groupId>
+            <artifactId>karaf-sandbox-rest</artifactId>
+            <version>1.0.0</version>
             <classifier>features</classifier>
             <scope>runtime</scope>
             <type>xml</type>
@@ -138,13 +147,12 @@
                 <groupId>org.apache.karaf.tooling</groupId>
                 <artifactId>karaf-maven-plugin</artifactId>
                 <configuration>
-                    <installedFeatures>
-                        <feature>wrapper</feature>
-                    </installedFeatures>
-                    <!-- <startupFeatures/> -->
+                    <installedFeatures/>
+                    <startupFeatures/>
                     <bootFeatures>
                         <feature>standard</feature>
                         <feature>hawtio-offline</feature>
+                        <feature>karaf-sandbox-rest</feature>
                     </bootFeatures>
                     <javase>1.8</javase>
                 </configuration>
