@@ -10,4 +10,4 @@ services:
     networks:
       - karaf-sandbox
 networks:
-  karaf-sandbox:
+  karafsandbox:
