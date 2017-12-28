@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>marem.karaf.sandbox</groupId>
+    <artifactId>karaf-sandbox</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>Marem :: Karaf Sandbox</name>
+    <description>Karaf sandbox project.</description>
+
+    <scm>
+        <url>https://github.com/remyma/karaf-sandbox</url>
+        <connection>https://github.com/remyma/karaf-sandbox.git</connection>
+        <developerConnection>https://github.com/remyma/karaf-sandbox.git</developerConnection>
+        <tag>master</tag>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>remyma</id>
+            <name>Matthieu Rémy</name>
+            <email>remy.matthieu@gmail.com</email>
+        </developer>
+    </developers>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <karaf.version>4.1.4</karaf.version>
+        <camel.version>2.19.1</camel.version>
+        <hawtio.version>1.5.6</hawtio.version>
+    </properties>
+
+    <modules>
+        <module>karaf-sandbox-rest</module>
+        <module>karaf-sandbox-distribution</module>
+    </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.3</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.6</version>
+                    <configuration>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>conditional</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>resources</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

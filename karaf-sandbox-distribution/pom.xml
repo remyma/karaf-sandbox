@@ -11,7 +11,7 @@
     <artifactId>karaf-sandbox-ditribution</artifactId>
     <packaging>karaf-assembly</packaging>
 
-    <name>Marem :: Karaf :: Sandbox distribution</name>
+    <name>Marem :: Karaf Sandbox :: distribution</name>
     <description>Karaf Sandbox distribution</description>
 
     <repositories>

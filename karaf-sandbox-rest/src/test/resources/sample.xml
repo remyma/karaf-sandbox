@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POSLog FixVersion="0" MajorVersion="6" MinorVersion="0" xmlns="http://www.nrf-arts.org/IXRetail/namespace/">
+  <Transaction TypeCode="SaleTransaction">
+    <BusinessUnit>dexcz1wbm02.preprod.org
+      <UnitID TypeCode="WebSite" Name="decathlon.fr">50-13-13</UnitID>
+    </BusinessUnit>
+    <BusinessUnit>
+      <UnitID TypeCode="WebSite" Name="Henin Beaumont">7-97-97</UnitID>
+    </BusinessUnit>
+    <Channel OnLineOffLineTypeCode="OnLine">
+      <ChannelID Description="Web"/>
+      <TouchPointID ManagedTypeCode="Retailer" PhysicalDigitalCode="Digital"/>
+    </Channel>
+    <WorkstationID TypeCode="Website" SerialNumber="OSMOSE-prfr_frt061">9003</WorkstationID>
+    <SequenceNumber>9191390</SequenceNumber>
+    <TransactionID>50-13-13-20160401104443-9003-FRA9191390</TransactionID>
+    <POSLogDateTime TypeCode="Message">2016-04-01T10:51:45</POSLogDateTime>
+    <POSLogDateTime TypeCode="Transaction">2016-04-01T10:44:43</POSLogDateTime>
+    <CurrencyCode>EUR</CurrencyCode>
+    <InvoiceNumber DateTime="2016-04-01T10:51:39">111 16 000 0000222370</InvoiceNumber>
+    <RetailTransaction TransactionStatus="Finished">
+      <LineItem EntryMethod="Automatic" CancelFlag="false" DeleteFlag="false" VoidFlag="false">
+        <Sale ItemType="Stock" NotNormallyStockedFlag="false" TaxableFlag="true" NonDiscountableFlag="false">
+          <ItemID>1731627</ItemID>
+          <MerchandiseHierarchy Level="Category" ID="DKT:Unknown">0</MerchandiseHierarchy>
+          <Description TypeCode="Short">Pull homme Arpenaz 300 M</Description>
+          <RegularSalesUnitPrice>19.99</RegularSalesUnitPrice>
+          <ActualSalesUnitPrice>19.99</ActualSalesUnitPrice>
+          <ExtendedAmount>19.99</ExtendedAmount>
+          <DiscountAmount>0.00</DiscountAmount>
+          <ExtendedDiscountAmount>0.00</ExtendedDiscountAmount>
+          <Quantity>1</Quantity>
+          <Tax TaxType="VAT">
+            <SequenceNumber>1</SequenceNumber>
+            <TaxableAmount TaxIncludedInTaxableAmountFlag="false">16.66</TaxableAmount>
+            <Amount>3.33</Amount>
+            <Percent>20.00</Percent>
+            <ReasonCode Name="DKT:HighVATRate" Description="TVA 20 sur encaissement"/>
+            <TaxGroupID>1</TaxGroupID>
+          </Tax>
+          <ItemNotOnFileFlag>false</ItemNotOnFileFlag>
+          <TaxIncludedInPriceFlag>true</TaxIncludedInPriceFlag>
+        </Sale>
+        <SequenceNumber>1</SequenceNumber>
+      </LineItem>
+      <LineItem EntryMethod="Automatic" CancelFlag="false" DeleteFlag="false" VoidFlag="false">
+        <Sale ItemType="Stock" NotNormallyStockedFlag="false" TaxableFlag="true" NonDiscountableFlag="false">
+          <ItemID>1700160</ItemID>
+          <MerchandiseHierarchy Level="Category" ID="DKT:Unknown">0</MerchandiseHierarchy>
+          <Description TypeCode="Short">Polaire chasse Taïga300 noire M</Description>
+          <RegularSalesUnitPrice>19.99</RegularSalesUnitPrice>
+          <ActualSalesUnitPrice>15.03</ActualSalesUnitPrice>
+          <ExtendedAmount>30.06</ExtendedAmount>
+          <DiscountAmount>4.96</DiscountAmount>
+          <ExtendedDiscountAmount>9.92</ExtendedDiscountAmount>
+          <Quantity>2</Quantity>
+          <RetailPriceModifier MethodCode="PriceOverride">
+            <SequenceNumber>1</SequenceNumber>
+            <Amount Action="Subtract">9.92</Amount>
+            <Percent Action="Subtract">24.81</Percent>
+            <PreviousPrice>19.99</PreviousPrice>
+            <NewPrice>10.07</NewPrice>
+            <PromotionID>10405</PromotionID>
+            <Description>24.8120300752% Pack With Global Discount 1X [8281238, 8281239, 8281240, 8281672, 8350476] 1X [8281238, 8281239, 8281240, 8281672, 8350476]</Description>
+            <PriceDerivationRule ApplicationType="Item">
+              <PriceDerivationRuleID>10405</PriceDerivationRuleID>
+              <ReasonCode Name="DKT:ItemLevelDiscount" Description="DKT:MixAndMatch">PROMO_PANOPLY</ReasonCode>
+            </PriceDerivationRule>
+          </RetailPriceModifier>
+          <Tax TaxType="VAT">
+            <SequenceNumber>1</SequenceNumber>
+            <TaxableAmount TaxIncludedInTaxableAmountFlag="false">12.52</TaxableAmount>
+            <Amount>2.50</Amount>
+            <Percent>20.00</Percent>
+            <ReasonCode Name="DKT:HighVATRate" Description="TVA 20 sur encaissement"/>
+            <TaxGroupID>1</TaxGroupID>
+          </Tax>
+          <ItemNotOnFileFlag>false</ItemNotOnFileFlag>
+          <TaxIncludedInPriceFlag>true</TaxIncludedInPriceFlag>
+        </Sale>
+        <SequenceNumber>2</SequenceNumber>
+      </LineItem>
+      <LineItem EntryMethod="Automatic" CancelFlag="false" DeleteFlag="false" VoidFlag="false">
+        <Sale ItemType="Stock" NotNormallyStockedFlag="false" TaxableFlag="true" NonDiscountableFlag="false">
+          <ItemID>1551234</ItemID>
+          <MerchandiseHierarchy Level="Category" ID="DKT:Unknown">0</MerchandiseHierarchy>
+          <Description TypeCode="Short">Polaire Homme Forclaz 50 M</Description>
+          <RegularSalesUnitPrice>8.99</RegularSalesUnitPrice>
+          <ActualSalesUnitPrice>8.99</ActualSalesUnitPrice>
+          <ExtendedAmount>35.96</ExtendedAmount>
+          <DiscountAmount>0.00</DiscountAmount>
+          <ExtendedDiscountAmount>0.00</ExtendedDiscountAmount>
+          <Quantity>4</Quantity>
+          <Tax TaxType="VAT">
+            <SequenceNumber>1</SequenceNumber>
+            <TaxableAmount TaxIncludedInTaxableAmountFlag="false">7.49</TaxableAmount>
+            <Amount>1.50</Amount>
+            <Percent>20.00</Percent>
+            <ReasonCode Name="DKT:HighVATRate" Description="TVA 20 sur encaissement"/>
+            <TaxGroupID>1</TaxGroupID>
+          </Tax>
+          <ItemNotOnFileFlag>false</ItemNotOnFileFlag>
+          <TaxIncludedInPriceFlag>true</TaxIncludedInPriceFlag>
+        </Sale>
+        <SequenceNumber>3</SequenceNumber>
+      </LineItem>
+      <LineItem EntryMethod="Automatic" CancelFlag="false" DeleteFlag="false" VoidFlag="false">
+        <Sale ItemType="Stock" NotNormallyStockedFlag="false" TaxableFlag="true" NonDiscountableFlag="false">
+          <ItemID>881605</ItemID>
+          <MerchandiseHierarchy Level="Category" ID="DKT:Unknown">0</MerchandiseHierarchy>
+          <Description TypeCode="Short">Forclaz 500 homme marine M</Description>
+          <RegularSalesUnitPrice>24.95</RegularSalesUnitPrice>
+          <ActualSalesUnitPrice>19.95</ActualSalesUnitPrice>
+          <ExtendedAmount>99.75</ExtendedAmount>
+          <DiscountAmount>5.00</DiscountAmount>
+          <ExtendedDiscountAmount>25.00</ExtendedDiscountAmount>
+          <Quantity>5</Quantity>
+          <RetailPriceModifier MethodCode="PriceOverride">
+            <SequenceNumber>1</SequenceNumber>
+            <Amount Action="Subtract">25.00</Amount>
+            <PreviousPrice>24.95</PreviousPrice>
+            <NewPrice>-0.05</NewPrice>
+            <PromotionID>4000</PromotionID>
+            <Description>Promo price</Description>
+            <PriceDerivationRule ApplicationType="Item">
+              <PriceDerivationRuleID>4000</PriceDerivationRuleID>
+              <ReasonCode Name="DKT:ItemLevelDiscount" Description="DKT:PromotionalPrice">PROMO_PRICE</ReasonCode>
+            </PriceDerivationRule>
+          </RetailPriceModifier>
+          <Tax TaxType="VAT">
+            <SequenceNumber>1</SequenceNumber>
+            <TaxableAmount TaxIncludedInTaxableAmountFlag="false">16.63</TaxableAmount>
+            <Amount>3.33</Amount>
+            <Percent>20.00</Percent>
+            <ReasonCode Name="DKT:HighVATRate" Description="TVA 20 sur encaissement"/>
+            <TaxGroupID>1</TaxGroupID>
+          </Tax>
+          <ItemNotOnFileFlag>false</ItemNotOnFileFlag>
+          <TaxIncludedInPriceFlag>true</TaxIncludedInPriceFlag>
+        </Sale>
+        <SequenceNumber>4</SequenceNumber>
+      </LineItem>
+      <LineItem EntryMethod="Automatic" CancelFlag="false" DeleteFlag="false" VoidFlag="false">
+        <Sale ItemType="Stock" NotNormallyStockedFlag="false" TaxableFlag="true" NonDiscountableFlag="false">
+          <ItemID>1556286</ItemID>
+          <MerchandiseHierarchy Level="Category" ID="DKT:Unknown">0</MerchandiseHierarchy>
+          <Description TypeCode="Short">Arpenaz 100 homme marine M</Description>
+          <RegularSalesUnitPrice>15.99</RegularSalesUnitPrice>
+          <ActualSalesUnitPrice>15.99</ActualSalesUnitPrice>
+          <ExtendedAmount>47.97</ExtendedAmount>
+          <DiscountAmount>0.00</DiscountAmount>
+          <ExtendedDiscountAmount>0.00</ExtendedDiscountAmount>
+          <Quantity>3</Quantity>
+          <Tax TaxType="VAT">
+            <SequenceNumber>1</SequenceNumber>
+            <TaxableAmount TaxIncludedInTaxableAmountFlag="false">13.33</TaxableAmount>
+            <Amount>2.67</Amount>
+            <Percent>20.00</Percent>
+            <ReasonCode Name="DKT:HighVATRate" Description="TVA 20 sur encaissement"/>
+            <TaxGroupID>1</TaxGroupID>
+          </Tax>
+          <ItemNotOnFileFlag>false</ItemNotOnFileFlag>
+          <TaxIncludedInPriceFlag>true</TaxIncludedInPriceFlag>
+        </Sale>
+        <SequenceNumber>5</SequenceNumber>
+      </LineItem>
+      <LineItem EntryMethod="Automatic" CancelFlag="false" DeleteFlag="false" VoidFlag="false">
+        <Sale ItemType="Fee" NotNormallyStockedFlag="true" TaxableFlag="true" NonDiscountableFlag="false">
+          <ItemID/>
+          <MerchandiseHierarchy Level="Category" ID="DKT:Unknown">0</MerchandiseHierarchy>
+          <Description TypeCode="Short">Frais de livraison</Description>
+          <RegularSalesUnitPrice>9.99</RegularSalesUnitPrice>
+          <ActualSalesUnitPrice>9.99</ActualSalesUnitPrice>
+          <ExtendedAmount>9.99</ExtendedAmount>
+          <DiscountAmount>0.00</DiscountAmount>
+          <ExtendedDiscountAmount>0.00</ExtendedDiscountAmount>
+          <Quantity>1</Quantity>
+          <Tax TaxType="VAT">
+            <SequenceNumber>1</SequenceNumber>
+            <TaxableAmount TaxIncludedInTaxableAmountFlag="false">8.33</TaxableAmount>
+            <Amount>1.67</Amount>
+            <Percent>20.00</Percent>
+            <ReasonCode Name="DKT:HighVATRate" Description=""/>
+            <TaxGroupID>1</TaxGroupID>
+          </Tax>
+          <ItemNotOnFileFlag>false</ItemNotOnFileFlag>
+          <TaxIncludedInPriceFlag>true</TaxIncludedInPriceFlag>
+        </Sale>
+        <SequenceNumber>6</SequenceNumber>
+      </LineItem>
+      <LineItem>
+        <Tax TaxType="VAT" TypeCode="Sale">
+          <SequenceNumber>1</SequenceNumber>
+          <TaxableAmount TaxIncludedInTaxableAmountFlag="false">203.13</TaxableAmount>
+          <Amount>40.62</Amount>
+          <Percent>20.00</Percent>
+          <ReasonCode Name="DKT:HighVATRate" Description="TVA 20 sur encaissement"/>
+          <TaxGroupID>1</TaxGroupID>
+        </Tax>
+        <SequenceNumber>7</SequenceNumber>
+      </LineItem>
+      <LineItem>
+        <Tender TypeCode="Sale" TenderType="DKT:Check">
+          <Amount Currency="EUR">243.72</Amount>
+          <ReasonCode Name="TenderID" Description="Cheque">2</ReasonCode>
+          <Check>
+            <CheckNumber>1234567</CheckNumber>
+          </Check>
+        </Tender>
+        <SequenceNumber>8</SequenceNumber>
+        <DateTime TypeCode="Transaction">2016-04-01T10:49:28</DateTime>
+      </LineItem>
+      <Total TypeCode="Sale" TotalType="TransactionGrandAmount">243.72</Total>
+      <Total TypeCode="Sale" TotalType="TransactionNetAmount">203.11</Total>
+      <Total TypeCode="Sale" TotalType="TransactionTaxAmount">40.62</Total>
+      <Total TypeCode="Sale" TotalType="DiscountAmount">144.84</Total>
+      <Total TypeCode="Sale" TotalType="DKT:Scoring">0</Total>
+      <Delivery Gender="Male">
+        <Name>
+          <Name TypeCode="FamilyName">DELATTRE</Name>
+          <Name TypeCode="GivenName">CHRISTOPHE.</Name>
+        </Name>
+        <Address AddressType="Delivery">
+          <AddressLine RelativeOrder="1">rue tutu</AddressLine>
+          <AddressLine RelativeOrder="2"/>
+          <City>LILLE</City>
+          <PostalCode>59000</PostalCode>
+          <Country>France</Country>
+        </Address>
+        <TelephoneNumber>
+          <LocalNumber>0101010101</LocalNumber>
+          <ITUCountryCode>FR</ITUCountryCode>
+        </TelephoneNumber>
+        <ActualDateTime>2016-04-01T10:51:38</ActualDateTime>
+        <Method>MES</Method>
+        <TrackingNumber>123456</TrackingNumber>
+        <Courier>GEODIS</Courier>
+        <ShippingFee Currency="EUR">9.99</ShippingFee>
+      </Delivery>
+      <Customer BusinessCustomerFlag="false" Gender="Male">
+        <Name>
+          <Name TypeCode="FamilyName">DELATTRE</Name>
+          <Name TypeCode="GivenName">CHRISTOPHE.</Name>
+        </Name>
+        <Address AddressType="Billing">
+          <AddressLine RelativeOrder="1">12 RUE FLORENT EVRARD</AddressLine>
+          <AddressLine RelativeOrder="2">fdf</AddressLine>
+          <City>London</City>
+          <PostalCode>E21AA</PostalCode>
+          <Country>United Kingdom</Country>
+        </Address>
+        <TelephoneNumber>
+          <LocalNumber>0301010117</LocalNumber>
+          <ITUCountryCode>FR</ITUCountryCode>
+        </TelephoneNumber>
+        <EMail>
+          <EMailAddress>christophe.delattre@decathlon.com</EMailAddress>
+        </EMail>
+      </Customer>
+    </RetailTransaction>
+  </Transaction>
+</POSLog>
